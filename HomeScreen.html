@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: LittleSpark;
+            src: url('KGALittleSpark.ttf');
+        }
+        body {
+            text-align: center;
+        }
+        h1 {
+            font-family: LittleSpark;
+            color: white;
+            font-size: 2cm;
+        }
+        .PlantProfileGrid {
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-gap: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+        img {
+            width: 80%;
+            margin: auto;
+        }
+        .PlantProfileLink {
+            position: relative;
+        }
+        .PlantName {
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 15%;
+        }
+        .PlantLevels {
+            text-align: left;
+            position: absolute;
+            display: grid;
+            grid-template-columns: 100% 100%;
+            grid-gap: 5%;
+            bottom:5%;
+            left: 15%;
+        }
+        .PlusText {
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 15%;
+        }
+        html {
+            height: 100%;
+            background: linear-gradient(45deg, palegreen 25%, seagreen 70%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        a {
+            color: white;
+        }
+        .PlusText {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Back, Username</h1>
+    <p>
+        <a href="http://www.google.com">Sensors</a>|
+        <a href="ShareScreen.html">Share</a>|
+        <a href="LoginScreen.html">Log Out</a>
+    </p>
+
+    <div class="PlantProfileGrid" id="PlantProfileGrid">
+
+        <div class="PlantProfileLink">
+            <a href="PlantPage.html">
+                <img src="PlantPhoto.png" alt="plant">
+                <h2 class="PlantName">Plant 1</h2>
+                <div class="PlantLevels">
+                    <h4>Temperature:</h4>
+                    <h4>pH:</h4>
+                    <h4>Moisture:</h4>
+                    <h4>Sun:</h4>
+                </div>
+            </a>
+        </div>
+        <div class="PlantProfileLink">
+                <img onclick="addPlant()" src="PlantPhoto.png" alt="plant">
+                <h1 class="PlusText">+</h1>
+        </div>
+
+    </div>
+
+
+<script>
+    function addPlant(){
+        var grid = document.getElementById('PlantProfileGrid');
+        grid.insertAdjacentHTML('afterbegin','<div class="PlantProfileLink">\n' +
+            '            <a href="PlantPage.html">\n' +
+            '                <img src="PlantPhoto.png" alt="plant">\n' +
+            '                <h2 class="PlantName">New Plant</h2>\n' +
+            '                <div class="PlantLevels">\n' +
+            '                    <h4>Temperature:</h4>\n' +
+            '                    <h4>pH:</h4>\n' +
+            '                    <h4>Moisture:</h4>\n' +
+            '                    <h4>Sun:</h4>\n' +
+            '                </div>\n' +
+            '            </a>\n' +
+            '        </div>');
+    }
+</script>
+
+</body>
+</html>

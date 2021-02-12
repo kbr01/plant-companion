@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: LittleSpark;
+            src: url('KGALittleSpark.ttf');
+        }
+
+        html {
+            height: 100%;
+            background: linear-gradient(45deg, palegreen 25%, seagreen 70%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .LoginDiv {
+            position: relative;
+            margin: auto;
+            width: 70%;
+            height: 100%;
+
+        }
+        .CultivaPhoto {
+            position: absolute;
+            width: 100%;
+        }
+        h1 {
+            font-family: LittleSpark;
+            color: white;
+            font-size: 2cm;
+        }
+        h3 {
+            color: white;
+        }
+        .LoginTextDiv {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+        }
+        input {
+            padding: 3px;
+            text-align: center;
+        }
+        .submitButton {
+            background: linear-gradient(0deg, palegreen, seagreen);
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="LoginDiv">
+        <img src="LoginPhoto.png" class="CultivaPhoto" alt="Cultiva Photo of Plant">
+        <div class="LoginTextDiv">
+            <h1>Cultiva</h1>
+            <h3>the smart planter</h3>
+            <form method="post" action="HomeScreen.html">
+                <input type="text" id="uName" name="uName" value="Username">
+                <br/>
+                <input type="text" is="pWord" name="pWord" value="Password">
+                <br/>
+                <input type="submit" value="Sign In" class="submitButton">
+            </form>
+            <a href="http://www.google.com">forgot username/password?</a>
+        </div>
+    </div>
+
+
+</body>
+</html>
